@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "?"//sets the prefix
-var commands = [prefix+"help",prefix+"autism",prefix+"ship"]//list of commands
+var commands = [prefix+"help",prefix+"autism",prefix+"ship",prefix+"meme add (in development)"]//list of commands
 var teeth = [1,"e"]
 client.on('ready', () => {//activates when "node ." is typed into command prompt
     console.log('Bot ready!');//tells the command prompt that the bot is ready

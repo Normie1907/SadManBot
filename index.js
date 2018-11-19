@@ -5,7 +5,7 @@ var commands = [prefix+"help",prefix+"autism",prefix+"ship",prefix+"meme add (in
 var teeth = [1,"e"]
 client.on('ready', () => {//activates when "node ." is typed into command prompt
     console.log('Bot ready!');//tells the command prompt that the bot is ready
-    client.user.setActivity("with my robotic foreskin");//sets the status to "Playing with my robotic foreskin"
+    client.user.setActivity("with my robotic foreskin | prefix: "+prefix);//sets the status to "Playing with my robotic foreskin"
 });
 client.on("message",(message)=>{//activates when a message is sent via dms or in a shared server [Commands one]
     if (message.author.bot) return//doesn't detect messages from bots

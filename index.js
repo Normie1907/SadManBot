@@ -117,4 +117,4 @@ client.on("message",(message)=>{//activates when a message is sent via dms or in
     }
 }
 });
-client.login('process.env.BOT_TOKEN');
+client.login(process.env.BOT_TOKEN);

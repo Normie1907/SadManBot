@@ -117,4 +117,4 @@ client.on("message",(message)=>{//activates when a message is sent via dms or in
     }
 }
 });
-client.login('NDk4OTI3MTMxNDg1Nzk4NDAw.DtOhnQ.PlpB6nTw6rbXm4x3ZfIF2neaTW0');
+client.login('process.env.BOT_TOKEN');

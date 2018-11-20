@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+let memeDatabase = JSON.parse(fs.readFileSync('memeDatabase.json', 'utf8'))
 const prefix = "?"//sets the prefix
 var commands = [prefix+"help",prefix+"autism",prefix+"ship",prefix+"meme add (in development)"]//list of commands
 var teeth = [1,"e"]
@@ -97,7 +98,17 @@ client.on("message",(message)=>{//activates when a message is sent via dms or in
             }
         }
         if (message.content.startsWith(prefix+"meme add")){//detects if the message starts with "?meme add"
-            teeth.push(message.embeds);//TRYING TO MAKE MEME DATABASE USER ADDS MEME AND CAN CALL A RANDOM ONE
+            memeToAdd = message.content.split(prefix+"meme add ").splice(1)
+            memeDatabase[database1].2 = memeToAdd
+            fs.writeFile("memeDatabase.json", JSON.stringify(serverData), (err) => {
+                if (err) console.error(err)
+            })
+            message.reply("your meme has been added to slot 2"
+            return
+        }
+        if (message.content.startsWith(prefix+"meme")){//detects if the message starts with "?meme add"
+            message.channel.send(memeDatabase[database1].2)
+            return
         }
     switch(message.content){//detects more simple commands
         case prefix+"help":;//activation of help command

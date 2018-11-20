@@ -103,7 +103,7 @@ client.on("message",(message)=>{//activates when a message is sent via dms or in
             fs.writeFile("memeDatabase.json", JSON.stringify(serverData), (err) => {
                 if (err) console.error(err)
             })
-            message.reply("your meme has been added to slot 2"
+            message.reply("your meme has been added to slot 2")
             return
         }
         if (message.content.startsWith(prefix+"meme")){//detects if the message starts with "?meme add"

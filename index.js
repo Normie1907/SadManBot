@@ -99,7 +99,7 @@ client.on("message",(message)=>{//activates when a message is sent via dms or in
         }
         if (message.content.startsWith(prefix+"meme add")){//detects if the message starts with "?meme add"
             memeToAdd = message.content.split(prefix+"meme add ").splice(1)
-            memeDatabase[database1].2 = memeToAdd
+            memeDatabase[database1].meme2 = memeToAdd
             fs.writeFile("memeDatabase.json", JSON.stringify(serverData), (err) => {
                 if (err) console.error(err)
             })
@@ -107,7 +107,7 @@ client.on("message",(message)=>{//activates when a message is sent via dms or in
             return
         }
         if (message.content.startsWith(prefix+"meme")){//detects if the message starts with "?meme add"
-            message.channel.send(memeDatabase[database1].2)
+            message.channel.send(memeDatabase[database1].meme2)
             return
         }
     switch(message.content){//detects more simple commands
